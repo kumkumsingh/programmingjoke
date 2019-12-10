@@ -38,6 +38,27 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-.emailButton {
+.button {
   background-color: #3e8e41;
+  margin-top : 15px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.programmingText {
+  color:purple;
+}
+
+.share{
+  margin-top: 15px;
+}
+
+.whatsapp{
+  /* border: 2px solid magenta; */
+  padding: 0;
+}
+.whatsapp-icon{
+  /* border: 2px solid #fff; */
+  margin-right: 0;
 }

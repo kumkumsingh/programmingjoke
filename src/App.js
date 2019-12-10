@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App-header">
-        <div>{`Programming Jokes {:`}</div>
+        <div className = 'programmingText' >{`Programming Jokes {:`}</div>
         <div>{this.state.joke ? this.state.joke["setup"] : "Loading"}</div>
         <div className="App">
           {this.state.punchLineText} {this.state.punchLine}
@@ -47,27 +47,28 @@ class App extends Component {
           <button className="button" onClick={this.refreshPage}>
             RefreshJokes
           </button>
-          <div>
-            Share:
-            <WhatsappShareButton
-              url="https://web.whatsapp.com/"
-              title={`Joke : ${this.state.joke["setup"]}\n PunchLine : ${this.state.joke["punchline"]}`}
-              separator=""
-            >
-              <WhatsappIcon size={60} round logoFillColor="white" />
-            </WhatsappShareButton>
-          </div>
-          <div>
-            <FacebookShareButton
-              url="https://www.facebook.com"
-              quote={`Joke : ${this.state.joke["setup"]}\n PunchLine : ${this.state.joke["punchline"]}`}
-              hashtag="#Programming Joke"
-              separator=""
-            >
-              <FacebookIcon size={60} round logoFillColor="white" />
-            </FacebookShareButton>
-          </div>
         </div>
+        <div className="flex-container share">
+          <div>Share:</div>
+          <div>
+          <WhatsappShareButton
+            url="https://web.whatsapp.com/"
+            title={`Joke : ${this.state.joke["setup"]}\n PunchLine : ${this.state.joke["punchline"]}`}
+            separator="" className="whatsapp">
+            <WhatsappIcon size={60} round className="whatsapp-icon" logoFillColor="white" />
+          </WhatsappShareButton>
+          </div>
+          <div>
+          <FacebookShareButton
+            url="https://www.facebook.com"
+            quote={`Joke : ${this.state.joke["setup"]}\n PunchLine : ${this.state.joke["punchline"]}`}
+            hashtag="#Programming Joke"
+            separator=""
+          >
+          <FacebookIcon size={60} round logoFillColor="white" />
+          </FacebookShareButton>
+          </div>
+          </div>
       </div>
     );
   }
